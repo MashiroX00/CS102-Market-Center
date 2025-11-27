@@ -3,7 +3,7 @@ from utils.clearscreen import clearscreen
 
 def sallermenu():
     print("==="*20)
-    print(f"{'Welcome to Saller Program':^60}")
+    print(f"{'Welcome to Seller Program':^60}")
     print("==="*20)
     while True:
         print("1) Checkout\n2) Add Discount\n3) Remove Discount\n4) List All Discount\n5) Exit")
@@ -47,13 +47,13 @@ def sallermenu():
             percent = input("Enter Discount Percent: ")
             maximum = input("Enter Discount Maximum: ")
             issucceded = insertDiscount(code=code,percent=percent,maximum=maximum)
-            print("Add Discount Succeded" if issucceded else "Add Discount Failed")
+            print("Add Discount Succeeded" if issucceded else "Add Discount Failed")
             print("==="*20)
         elif menu == "3":
             clearscreen()
             id = input("Enter Discount ID: ")
             issucceded = removeDiscount(discountId=id)
-            print("Remove Discount Succeded" if issucceded else "Remove Discount Failed or Discount not found")
+            print("Remove Discount Succeeded" if issucceded else "Remove Discount Failed or Discount not found")
             print("==="*20)
         elif menu == "4":
             clearscreen()

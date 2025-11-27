@@ -23,13 +23,13 @@ def mainScreen(session: list):
             itemname = input("Enter Item Name: ")
             itemprice = input("Enter Item Price: ")
             issucceded = insertItem(itemname=itemname,itemprice=itemprice)
-            print("Add Item Succeded" if issucceded else "Add Item Failed")
+            print("Add Item Succeeded" if issucceded else "Add Item Failed")
             print("==="*20)
         elif menu == "3":
             clearscreen()
             id = input("Enter Item ID: ")
             issucceded = removeItem(itemid=id)
-            print("Remove Item Succeded" if issucceded else "Remove Item Failed or Item not found")
+            print("Remove Item Succeeded" if issucceded else "Remove Item Failed or Item not found")
             print("==="*20)
         elif menu == "4":
             clearscreen()
@@ -56,14 +56,14 @@ def mainScreen(session: list):
                     print("Invalid Role")
                     break
                 issucceded = insertUser(username=userName,password=UserPass,userrole=userrole,isAdmin=True)
-                print("Add User Succeded" if issucceded else "Add User Failed")
+                print("Add User Succeeded" if issucceded else "Add User Failed")
                 print("==="*20)
                 break
         elif menu == "7" and session[2] == "admin":
             clearscreen()
             username = input("Enter Username: ")
             issucceded = removeUser(username=username)
-            print("Remove User Succeded" if issucceded else "Remove User Failed or User not found")
+            print("Remove User Succeeded" if issucceded else "Remove User Failed or User not found")
             print("==="*20)
         elif menu == "8" and session[2] == "admin":
             clearscreen()
@@ -80,7 +80,7 @@ def mainScreen(session: list):
             username = input("Enter Username: ")
             password = input("Enter New Password: ")
             issucceded = resetPassword(username=username,password=password)
-            print("Reset Password Succeded" if issucceded else "Reset Password Failed or User not found")
+            print("Reset Password Succeeded" if issucceded else "Reset Password Failed or User not found")
             print("==="*20)
             continue
         else:
