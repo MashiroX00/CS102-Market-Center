@@ -1,3 +1,0 @@
-2	water	20
-3	Matcha	25
-4	chocobar	20
